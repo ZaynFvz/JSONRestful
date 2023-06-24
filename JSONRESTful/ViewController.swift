@@ -44,6 +44,14 @@ class ViewController: UIViewController {
                 print("Nombre de usuario y/o contraseña incorrectos")
             }else{
                 print("LOGEO EXITOSO")
+                
+                let defaults = UserDefaults.standard
+                let usuario = self.users[0]
+                defaults.set(usuario.id, forKey: "userID")
+                defaults.set(usuario.nombre, forKey: "nombre")
+                defaults.set(usuario.clave, forKey: "clave")
+                defaults.set(usuario.email, forKey: "email")
+                
                 self.performSegue(withIdentifier: "segueLogeo", sender: nil)
                 for data in self.users{
                     print("id:\(data.id), nombre:\(data.nombre), email:\(data.email)")

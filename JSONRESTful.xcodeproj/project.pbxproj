@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F49A2F222A46115000F33EE8 /* ViewControllerAgregar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49A2F212A46115000F33EE8 /* ViewControllerAgregar.swift */; };
-		F49A2F242A46341100F33EE8 /* ViewControllerEditarPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49A2F232A46341100F33EE8 /* ViewControllerEditarPerfil.swift */; };
+		F49A2F242A46341100F33EE8 /* EditarPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49A2F232A46341100F33EE8 /* EditarPerfilViewController.swift */; };
 		F4CA1F492A4341820016FFD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA1F482A4341820016FFD9 /* AppDelegate.swift */; };
 		F4CA1F4B2A4341820016FFD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA1F4A2A4341820016FFD9 /* SceneDelegate.swift */; };
 		F4CA1F4D2A4341820016FFD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA1F4C2A4341820016FFD9 /* ViewController.swift */; };
@@ -22,7 +22,7 @@
 
 /* Begin PBXFileReference section */
 		F49A2F212A46115000F33EE8 /* ViewControllerAgregar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAgregar.swift; sourceTree = "<group>"; };
-		F49A2F232A46341100F33EE8 /* ViewControllerEditarPerfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEditarPerfil.swift; sourceTree = "<group>"; };
+		F49A2F232A46341100F33EE8 /* EditarPerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPerfilViewController.swift; sourceTree = "<group>"; };
 		F4CA1F452A4341820016FFD9 /* JSONRESTful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONRESTful.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CA1F482A4341820016FFD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CA1F4A2A4341820016FFD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 				F4CA1F5E2A43638B0016FFD9 /* ViewControllerBuscar.swift */,
 				F4CA1F602A4363B80016FFD9 /* Peliculas.swift */,
 				F49A2F212A46115000F33EE8 /* ViewControllerAgregar.swift */,
-				F49A2F232A46341100F33EE8 /* ViewControllerEditarPerfil.swift */,
+				F49A2F232A46341100F33EE8 /* EditarPerfilViewController.swift */,
 			);
 			path = JSONRESTful;
 			sourceTree = "<group>";
@@ -155,7 +155,7 @@
 			files = (
 				F4CA1F612A4363B80016FFD9 /* Peliculas.swift in Sources */,
 				F4CA1F5D2A4347430016FFD9 /* Users.swift in Sources */,
-				F49A2F242A46341100F33EE8 /* ViewControllerEditarPerfil.swift in Sources */,
+				F49A2F242A46341100F33EE8 /* EditarPerfilViewController.swift in Sources */,
 				F4CA1F4D2A4341820016FFD9 /* ViewController.swift in Sources */,
 				F4CA1F492A4341820016FFD9 /* AppDelegate.swift in Sources */,
 				F4CA1F4B2A4341820016FFD9 /* SceneDelegate.swift in Sources */,

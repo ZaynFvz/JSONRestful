@@ -189,7 +189,11 @@
                                     <segue destination="l6x-Rr-KaM" kind="show" identifier="segueAgregar" id="h0p-NY-RDf"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Editar Perfil" id="U5e-cb-62K"/>
+                            <barButtonItem title="Editar Perfil" id="U5e-cb-62K">
+                                <connections>
+                                    <segue destination="bDN-DA-j3h" kind="show" identifier="segueEditarPerfil" id="iZO-YD-YHC"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -322,43 +326,46 @@
         <!--Editar Perfil-->
         <scene sceneID="sLR-I7-fNF">
             <objects>
-                <viewController id="bDN-DA-j3h" customClass="ViewControllerEditarPerfil" customModule="JSONRESTful" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bDN-DA-j3h" customClass="EditarPerfilViewController" customModule="JSONRESTful" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JaR-w4-9IY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrese sus nuevos datos de acceso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNM-9b-9Ie">
-                                <rect key="frame" x="30.5" y="294" width="353" height="25.5"/>
+                                <rect key="frame" x="30.5" y="306" width="353" height="25.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="editarperfill" translatesAutoresizingMaskIntoConstraints="NO" id="iEv-sN-MmE">
-                                <rect key="frame" x="117" y="74" width="180" height="180"/>
+                                <rect key="frame" x="117" y="86" width="180" height="180"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese un nuevo usuario" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IHv-ff-MqT">
-                                <rect key="frame" x="70" y="369.5" width="274" height="34"/>
+                                <rect key="frame" x="70" y="381.5" width="274" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese un nuevo correo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qlq-dw-KAr">
-                                <rect key="frame" x="70" y="438.5" width="274" height="34"/>
+                                <rect key="frame" x="70" y="450.5" width="274" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese una nueva contraseña" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oKY-Sq-x6y">
-                                <rect key="frame" x="70" y="507.5" width="274" height="34"/>
+                                <rect key="frame" x="70" y="519.5" width="274" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbd-JA-QcS">
-                                <rect key="frame" x="120" y="596.5" width="174" height="36"/>
+                                <rect key="frame" x="120" y="608.5" width="174" height="36"/>
                                 <color key="backgroundColor" systemColor="systemMintColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Guardar Cambios">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnGuardarCambios:" destination="bDN-DA-j3h" eventType="touchUpInside" id="b6y-Du-BR9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6lt-aU-unG"/>
@@ -383,6 +390,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Editar Perfil" id="nNB-g5-2nv"/>
+                    <connections>
+                        <outlet property="txtClave" destination="oKY-Sq-x6y" id="8Nn-ya-n3s"/>
+                        <outlet property="txtEmail" destination="Qlq-dw-KAr" id="PQv-vb-Vkp"/>
+                        <outlet property="txtNombre" destination="IHv-ff-MqT" id="FJM-6F-MTb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3r-bC-DHX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -408,7 +420,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="v1v-Nq-Ooj"/>
+        <segue reference="h0p-NY-RDf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="editarperfill" width="180" height="180"/>
